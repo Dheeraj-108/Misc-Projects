@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
+
+  <style>
+    nav {
+      background-color: #333;
+      padding: 10px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-left, .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-left a, .nav-right a {
+      color: white;
+      margin-right: 10px;
+      text-decoration: none;
+    }
+
+    .nav-right a:last-child {
+      margin-right: 0;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <a href="/events/">Home</a>
+      <a href="/events/create">Create Event</a>
+    </div>
+
+    <div class="nav-right">
+      <% if (username) { %>
+        <a>Username: <%= username %></a>
+        <a href="/users/dashboard"> Dashboard </a>
+        <a href="/users/logout"> Logout </a>
+      <% } else { %>
+        <a href="/users/login">Login</a>
+        <a href="/users/signup">Signup</a>
+      <% } %>
+    </div>
+  </nav>
+</body>
+</html>
