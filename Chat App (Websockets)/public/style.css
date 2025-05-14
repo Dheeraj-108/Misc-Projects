@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.chat-container {
+  width: 400px;
+  height: 600px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.chat-header {
+  padding: 1rem;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+}
+
+.client-count {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+.clientName {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #ffffff;
+
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  max-width: 70%;
+  padding: 0.75rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.message .meta {
+  font-size: 0.7rem;
+  color: #555;
+  margin-bottom: 2px;
+}
+
+.sender {
+  align-self: flex-end;
+  background-color: #daf1fc;
+  color: #2a2a2a;
+}
+
+.receiver {
+  align-self: flex-start;
+  background-color: #e4e6eb;
+  color: #2a2a2a;
+}
+
+.typing-status {
+  font-size: 0.8rem;
+  color: #777;
+  padding: 0 1rem 0.5rem 1rem;
+  font-style: italic;
+  height: 1rem;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.chat-input button {
+  background-color: #4a90e2;
+  border: none;
+  color: white;
+  padding: 0 1.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.chat-input button:hover {
+  background-color: #3b7dd8;
+}
+
+@media (max-width: 480px) {
+  .chat-container {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .chat-header {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .clientName {
+    font-size: 1rem;
+  }
+
+  .client-count {
+    font-size: 0.75rem;
+    right: 0.5rem;
+  }
+
+  .chat-messages {
+    padding: 0.75rem;
+    gap: 8px;
+  }
+
+  .message {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .message .meta {
+    font-size: 0.65rem;
+  }
+
+  .typing-status {
+    font-size: 0.75rem;
+    padding: 0 0.75rem 0.4rem;
+  }
+
+  .chat-input input {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .chat-input button {
+    padding: 0 1rem;
+    font-size: 0.95rem;
+  }
+}
