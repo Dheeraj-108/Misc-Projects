@@ -1,0 +1,22 @@
+[
+    {
+        "taskname": "Eat",
+        "taskdesc": "Make sure to eat thrice a day",
+        "status": "Completed"
+    },
+    {
+        "taskname": "Sleep",
+        "taskdesc": "A proper and healthy sleep is must",
+        "status": "Pending"
+    },
+    {
+        "taskname": "Code",
+        "taskdesc": "Practice and learn code daily",
+        "status": "In Progress"
+    },
+    {
+        "taskname": "mytask",
+        "taskdesc": "mydescriptin",
+        "status": "Pending"
+    }
+]
